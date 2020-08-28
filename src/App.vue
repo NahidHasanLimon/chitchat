@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Messages> </Messages>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* eslint-disable vue/no-unused-components */
+import Messages from './components/Messages.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Messages
   }
 }
 </script>
