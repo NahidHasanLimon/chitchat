@@ -19,4 +19,8 @@ app.post('/messages',(req,res) => {
     messages.push(msg.message);
      res.json(msg);
 });
+app.get('/singlemessage/:id',(req,res) => {
+    console.log(req.params.id);
+     res.send(messages[req.params.id]);
+});
  app.listen(port,() => console.log("app") );

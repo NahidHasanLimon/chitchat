@@ -5,19 +5,21 @@
       color="secondary"
       dark
     >
-      <v-btn flat> Messages </v-btn>
+      <v-btn text to="/"> Messages </v-btn>
+      <v-btn text to="/newmessages"> New Messages </v-btn>
       <v-spacer></v-spacer>
-      <v-btn flat> Login </v-btn>
+      <v-btn text> Login </v-btn>
     </v-app-bar>
 
     <v-main>
-      <NewMessage/>
-      <Messages/>
+      <br>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
+/* eslint-disable vue/no-unused-components */
 import Messages from './components/Messages';
 import NewMessage from './components/NewMessage';
 

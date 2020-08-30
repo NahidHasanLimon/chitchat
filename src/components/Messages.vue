@@ -8,8 +8,9 @@
         </v-toolbar>
         <v-list>
             <v-list-item
-                v-for="message in $store.state.messages"
+                v-for="(message,index) in $store.state.messages"
                 :key="message"
+                :to="'singlemessage/'+index"
                
             >
                 <!-- <v-list-item-icon>

@@ -2,7 +2,9 @@
  import Vuex from 'vuex';
  import axios from 'axios';
  Vue.use(Vuex);
+ 
  export default  new Vuex.Store({
+     /* eslint-disable vue/no-unused-components */
     state:{
         messages: []
     },
@@ -25,6 +27,13 @@
                 message: messageBody
                 })).data;
             commit('newMessage',msg.message);
+        },
+        // async getSingleMessage(id){
+        //     return axios.get(`http://localhost:3000/singlemessage/${id}`);
+        // }
+        async getSingleMessage({commit},id){
+            return axios.get(`http://localhost:3000/singlemessage/${id}`)
+           
         },
         
     }
