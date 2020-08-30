@@ -9,6 +9,7 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import store from './store.js'
 import vuetify from './plugins/vuetify';
 import Vuetify from 'vuetify'
+import vueRouter from 'vue-router'
 Vue.use(Vuetify)
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)

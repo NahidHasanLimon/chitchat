@@ -5,7 +5,9 @@
       color="secondary"
       dark
     >
-      
+      <v-btn flat> Messages </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn flat> Login </v-btn>
     </v-app-bar>
 
     <v-main>
