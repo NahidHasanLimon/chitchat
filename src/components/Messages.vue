@@ -1,22 +1,43 @@
 <template>
-    <div>
-        
-        <div class="card">
-            <div class="card-header">Messages</div>
-            <div class="card-body">
-                <ul>
+    <v-flex sm8 offset-sm2>
+        <v-card>
+        <v-toolbar >
+            <v-toolbar-title>
+                Messages
+            </v-toolbar-title>
+        </v-toolbar>
+        <v-list>
+            <v-list-item
+                v-for="message in $store.state.messages"
+                :key="message"
+               
+            >
+                <!-- <v-list-item-icon>
+                <v-icon v-if="item.icon" color="pink">mdi-star</v-icon>
+                </v-list-item-icon> -->
 
-                </ul>
-            </div>
-        </div>
-    </div>
+                <v-list-item-content>
+                <v-list-item-title v-text="message"></v-list-item-title>
+                </v-list-item-content>
+
+                <!-- <v-list-item-avatar>
+                <v-img :src="item.avatar"></v-img>
+                </v-list-item-avatar> -->
+            </v-list-item>
+            </v-list>
+        </v-card>
+    </v-flex>
 </template> 
 <script>
+    // import axios from 'axios';
+  
      export default {
-         data(){
-             return {
-                 messages:["hello","HI"],
-             };
+         async created() {
+             console.log('created');
+            //  let messages=(await axios.get('http://localhost:3000/messages')).data ;
+            //  this.$store.commit('updateMessages',messages);
+            this.$store.dispatch('getMessages');
          }
+        
      }
 </script>

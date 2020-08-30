@@ -5,6 +5,8 @@
 * Vue
 * Vue CLI
 * NODE
+* NODEMON
 * Express
+* Axios
 * VUEX
 * NPM
