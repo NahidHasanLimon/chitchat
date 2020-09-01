@@ -26,11 +26,18 @@
             {
                 message: messageBody
                 })).data;
+                // axios.defaults.headers.common['Authorization']== user.id;
             commit('newMessage',msg.message);
         },
-        // async getSingleMessage(id){
-        //     return axios.get(`http://localhost:3000/singlemessage/${id}`);
-        // }
+        async register({commit},registerData){
+          let user=  (await axios.post("http://localhost:3000/register",registerData )).data;
+          console.log(user);
+          console.log(user.id);
+          localStorage.setItem("token",user.id);
+          axios.defaults.headers.common['Authorization']= user.id;
+           
+        },
+      
         async getSingleMessage({commit},id){
             return axios.get(`http://localhost:3000/singlemessage/${id}`)
            

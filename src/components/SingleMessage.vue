@@ -18,7 +18,10 @@
                     </v-toolbar-title>
                 </v-toolbar>
                  <v-card-text>
-                     {{messageBody}}
+                     {{message.text}}
+                 </v-card-text>
+                 <v-card-text>
+                     posted by :{{message.user}}
                  </v-card-text>
             
             </v-col>
@@ -36,14 +39,14 @@
      export default {
          data(){
              return {
-                messageBody: " "
+                message: " "
              };
          },
          async created () {
             //  console.log(this.$route.params.id);
              let id=this.$route.params.id;
              console.log(id);
-             this.messageBody = (await this.$store.dispatch('getSingleMessage', id)).data
+             this.message = (await this.$store.dispatch('getSingleMessage', id)).data
 
          },
 

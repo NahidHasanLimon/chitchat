@@ -8,6 +8,7 @@
       <v-btn text to="/"> Messages </v-btn>
       <v-btn text to="/newmessages"> New Messages </v-btn>
       <v-spacer></v-spacer>
+      <v-btn text to="/register"> Register </v-btn>
       <v-btn text> Login </v-btn>
     </v-app-bar>
 
