@@ -16,6 +16,7 @@ import Messages from './components/Messages'
 import NewMessage from './components/NewMessage'
 import SingleMessage from './components/SingleMessage'
 import Register from './components/Register'
+import Login from './components/Login'
 
 Vue.use(Vuetify)
 Vue.use(BootstrapVue)
@@ -28,6 +29,7 @@ const routes =[
   { path: "/newmessages",component: NewMessage},
   { path: "/singlemessage/:id",component: SingleMessage},
   { path: "/register",component: Register},
+  { path: "/login",component: Login},
 ]
 const router = new vueRouter({routes, mode: 'history'})
 
